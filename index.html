@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Goal Crusher - Your Personal Goal Tracking App">
+    <meta name="theme-color" content="#ef4444">
+    <title>Goal Crusher - Your Personal Goal Tracking App</title>
+
+    <!-- Add iOS meta tags and icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Goal Crusher">
+
+    <!-- Link the compiled CSS -->
+    <link rel="stylesheet" href="./assets/index.css">
+
+    <!-- Preload key assets -->
+    <link rel="modulepreload" href="./assets/index.js">
+
+    <!-- Add PWA manifest -->
+    <link rel="manifest" href="./manifest.json">
+</head>
+<body class="bg-background">
+    <div id="root"></div>
+
+    <!-- Load the compiled JavaScript bundle -->
+    <script type="module" src="./assets/index.js"></script>
+
+    <!-- Add service worker registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js').catch(err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

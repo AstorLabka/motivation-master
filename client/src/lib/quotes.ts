@@ -1,0 +1,33 @@
+export const motivationalQuotes = [
+  "WAKE UP AND STOP WASTING YOUR POTENTIAL!",
+  "GET UP! YOUR DREAMS WON'T ACHIEVE THEMSELVES!",
+  "ENOUGH EXCUSES! TIME TO MAKE IT HAPPEN!",
+  "BEING LAZY IS NOT AN OPTION! GET MOVING!",
+  "YESTERDAY YOU SAID TOMORROW. JUST DO IT!",
+  "COMFORT ZONES ARE FOR THE WEAK! PUSH HARDER!",
+  "STOP DREAMING, START DOING!",
+  "NO MORE PROCRASTINATION! ACT NOW!",
+  "DISCIPLINE EQUALS FREEDOM! GET UP!",
+  "MEDIOCRITY IS NOT AN OPTION! EXCEL!"
+];
+
+export const achievementQuotes = [
+  "INCREDIBLE ACHIEVEMENT! YOU'RE UNSTOPPABLE! 🏆",
+  "ANOTHER GOAL CRUSHED! KEEP THE MOMENTUM GOING! 💪",
+  "YOU'RE ON FIRE! NOTHING CAN STOP YOU NOW! 🔥",
+  "SUCCESS LOOKS GOOD ON YOU! WHAT'S NEXT? 🎯",
+  "GOAL DEMOLISHED! TIME TO SET THE BAR HIGHER! 🚀",
+  "YOU'RE MAKING IT HAPPEN! KEEP PUSHING! ⭐",
+  "OUTSTANDING WORK! YOU'RE A GOAL-CRUSHING MACHINE! 🌟",
+  "THIS IS JUST THE BEGINNING OF YOUR SUCCESS STORY! 📈",
+  "YOU DID IT! NOW ONTO THE NEXT CHALLENGE! 🎊",
+  "VICTORY TASTES SWEET! KEEP COLLECTING WINS! 🏅"
+];
+
+export function getRandomQuote(): string {
+  return motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
+}
+
+export function getRandomAchievementQuote(): string {
+  return achievementQuotes[Math.floor(Math.random() * achievementQuotes.length)];
+}
